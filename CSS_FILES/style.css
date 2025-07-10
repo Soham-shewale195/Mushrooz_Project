@@ -1,7 +1,6 @@
 /* Index.html */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
   background: #f4f4f4;
    min-height: 100vh;
   display: flex;
@@ -33,22 +32,71 @@ nav a:hover {
   background-color: #555;
 }
 
+/* hero section */
+/* 🌲 Mushroom Forest Hero */
 .hero {
-  background: url('https://images.unsplash.com/photo-1565623832219-f836c20f7c4f') center/cover no-repeat;
-  height: 300px;
-  color: white;
+  height: 10vh; /* Reduced from 100vh to 60% of screen height */
+  background: url('https://images.unsplash.com/photo-1512218168357-4bba6ac5b040') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px;  /* Reduced from 0 20px */
+  position: relative;
+  color: #fff;
+  overflow: hidden;
 }
 
-.hero h1 {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+
+/* 🍄 Title Style */
+.mushroom-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0a0;
+  animation: floatText 3s ease-in-out infinite;
+  letter-spacing: 2px;
 }
 
+/* 🍄 Glowing "Mushrooz" word */
+.glow-text {
+  color: #d35400; /* Burnt orange (mushroom-like cap color) */
+  text-shadow: 
+    0 0 10px #d35400, 
+    0 0 20px #f39c12, 
+    0 0 30px #e67e22;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+
+/* 🎯 Floating Title Animation */
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 💡 Glowing Pulse */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px #d35400;
+  }
+  50% {
+    text-shadow: 
+      0 0 15px #e67e22, 
+      0 0 30px #f39c12;
+  }
+  100% {
+    text-shadow: 0 0 5px #d35400;
+  }
+}
+
+/* ends hero section */
+
+/* new section */
 .section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -61,13 +109,30 @@ nav a:hover {
   padding-bottom: 10px;
 }
 
+/* footer section */
 footer {
   background: #3d3d3d;
   color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: auto;
+  padding: 20px 10px;
 }
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f39c12; /* golden glow */
+}
+/* End footer section */
 
 /* Contact us page */
  .contact-container {
@@ -156,3 +221,96 @@ footer {
   margin: 5px 0;
   color: #555;
 }
+
+/* .slider-section */
+.carousel-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  height: 100%;
+}
+
+.carousel-slide {
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  /* background: rgba(0,0,0,0.3); */
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Dots */
+.carousel-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
+
+

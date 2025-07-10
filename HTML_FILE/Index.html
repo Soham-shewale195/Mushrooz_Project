@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mushroom World</title>
   <link rel="stylesheet" href="/CSS_FILES/style.css" />
+  <!-- icons link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
-    <h1>Mushroom World</h1>
+
+    <!-- hero-section -->
+    <section class="hero">
+      <h1 class="mushroom-title">
+        Welcome to the <span class="glow-text">Mushrooz</span> 🍄
+      </h1>
+    </section>
+
     <p>Explore the mysterious and magical world of mushrooms</p>
   </header>
 
   <!-- Navigation -->
-   <nav>
+  <nav>
     <a href="Index.html">Home</a>
     <a href="Benefits.html">Benefits</a>
     <a href="Identification.html">Identification</a>
@@ -23,29 +35,68 @@
     <a href="About_us.html">About Us</a>
   </nav>
 
- <section class="hero">
-  <h1>Welcome to the Mushroom Encyclopedia 🍄</h1>
-</section>
 
-<section class="section" id="about">
-  <h2>About Mushrooms</h2>
-  <p>
-    Mushrooms are fungi that come in many shapes, sizes, and colors. Some are edible and packed with nutrients, others are toxic.
-  </p>
-</section>
+  <!-- slider-section -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-slide fade">
+        <img src="/IMAGES/button-mush.jpg" alt="Button Mushroom" />
+        <div class="slide-text">Button Mushrooms – Mild and popular 🍄</div>
+      </div>
 
-<section class="section" id="types">
-  <h2>Popular Types of Mushrooms</h2>
-  <ul>
-    <li><strong>Button Mushroom:</strong> Mild, common.</li>
-    <li><strong>Shiitake:</strong> Meaty, used in Asian dishes.</li>
-    <li><strong>Oyster Mushroom:</strong> Delicate, stir-fry friendly.</li>
-  </ul>
-</section>
+      <div class="carousel-slide fade">
+        <img src="/IMAGES/cemini-mush.jpg" alt="Cremini Mushroom" />
+        <div class="slide-text">Cremini Mushrooms – Earthy, rich, and versatile 🍄</div>
+      </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Mushroom World | All Rights Reserved</p>
-  </footer>
+      <div class="carousel-slide fade">
+        <img src="/IMAGES/oyster-mush.jpg" alt="Oyster Mushroom" />
+        <div class="slide-text">Oyster Mushrooms – Delicate and smooth 🌿</div>
+      </div>
+
+      <!-- Arrows -->
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <!-- Dots -->
+    <div class="carousel-dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+
+  <section class="section" id="about">
+    <h2>About Mushrooms</h2>
+    <p>
+      Mushrooms are fungi that come in many shapes, sizes, and colors. Some are edible and packed with nutrients, others
+      are toxic.
+    </p>
+  </section>
+
+  <section class="section" id="types">
+    <h2>Popular Types of Mushrooms</h2>
+    <ul>
+      <li><strong>Button Mushroom:</strong> Mild, common.</li>
+      <li><strong>Shiitake:</strong> Meaty, used in Asian dishes.</li>
+      <li><strong>Oyster Mushroom:</strong> Delicate, stir-fry friendly.</li>
+    </ul>
+  </section>
+
+<!-- footer section -->
+<footer>
+  <p>&copy; 2025 Mushroom World | All Rights Reserved</p>
+  <div class="social-icons">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+
+
+  <script src="/JAVASCRIPT FILE/index.js"></script>
 </body>
 </html>
