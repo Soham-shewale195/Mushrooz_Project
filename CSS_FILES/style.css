@@ -313,3 +313,13 @@ footer {
 .dot.active, .dot:hover {
   background-color: #717171;
 }
+
+/* google map location  */
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
