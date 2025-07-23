@@ -1,24 +1,25 @@
-
 /* Index.html */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
-   min-height: 100vh;
+  background-color: #F5F0E1;
+  /* ⛔ Old faint beige */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  background: #3d3d3d;
-  color: white;
+  background: #df9f4b;
+  /* Slightly deeper faint brown */
+  color: #333;
   padding: 20px 0;
   text-align: center;
 }
 
 nav {
   display: flex;
-  justify-content: center;
-  background: #2d2d2d;
+  justify-content: space-around;
+  background: #a15f08;
   flex-wrap: wrap;
 }
 
@@ -36,13 +37,15 @@ nav a:hover {
 /* hero section */
 /* 🌲 Mushroom Forest Hero */
 .hero {
-  height: 10vh; /* Reduced from 100vh to 60% of screen height */
+  height: 50px;
+  /* Reduced from 100vh to 60% of screen height */
   background: url('https://images.unsplash.com/photo-1512218168357-4bba6ac5b040') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;  /* Reduced from 0 20px */
+  padding: 10px;
+  /* Reduced from 0 20px */
   position: relative;
   color: #fff;
   overflow: hidden;
@@ -61,10 +64,11 @@ nav a:hover {
 
 /* 🍄 Glowing "Mushrooz" word */
 .glow-text {
-  color: #d35400; /* Burnt orange (mushroom-like cap color) */
-  text-shadow: 
-    0 0 10px #d35400, 
-    0 0 20px #f39c12, 
+  color: #d35400;
+  /* Burnt orange (mushroom-like cap color) */
+  text-shadow:
+    0 0 10px #d35400,
+    0 0 20px #f39c12,
     0 0 30px #e67e22;
   animation: glowPulse 2s infinite ease-in-out;
 }
@@ -72,9 +76,12 @@ nav a:hover {
 
 /* 🎯 Floating Title Animation */
 @keyframes floatText {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -85,11 +92,13 @@ nav a:hover {
   0% {
     text-shadow: 0 0 5px #d35400;
   }
+
   50% {
-    text-shadow: 
-      0 0 15px #e67e22, 
+    text-shadow:
+      0 0 15px #e67e22,
       0 0 30px #f39c12;
   }
+
   100% {
     text-shadow: 0 0 5px #d35400;
   }
@@ -112,11 +121,13 @@ nav a:hover {
 
 /* footer section */
 footer {
-  background: #3d3d3d;
-  color: white;
+  background: #d2b48c;
+  /* Slightly deeper faint brown */
+  color: #333;
   text-align: center;
   padding: 20px 10px;
 }
+
 
 .social-icons {
   margin-top: 10px;
@@ -131,65 +142,68 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #f39c12; /* golden glow */
+  color: #f39c12;
+  /* golden glow */
 }
+
 /* End footer section */
 
 /* Contact us page */
- .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .contact-form, .owner-info {
-      flex: 1 1 45%;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-    }
+.contact-form,
+.owner-info {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    .contact-form button {
-      padding: 10px 20px;
-      background: #3d3d3d;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.contact-form button {
+  padding: 10px 20px;
+  background: #3d3d3d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    .owner-info img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border: 2px solid #333;
-    }
+.owner-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+}
 
-    .owner-info h3 {
-      margin-top: 0;
-    }
+.owner-info h3 {
+  margin-top: 0;
+}
 
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-      }
-      }
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
 
 /* About Us - Profile Section */
 .profile-card {
@@ -264,7 +278,8 @@ footer {
 }
 
 /* Arrows */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -279,8 +294,9 @@ footer {
   transition: background 0.3s;
 }
 
-.prev:hover, .next:hover {
-  background: rgba(0,0,0,0.6);
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .prev {
@@ -310,16 +326,158 @@ footer {
   transition: background 0.3s;
 }
 
-.dot.active, .dot:hover {
+.dot.active,
+.dot:hover {
   background-color: #717171;
 }
 
 /* google map location  */
 .map-container {
   width: 100%;
-  max-width: 800px;
-  margin: 30px auto;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
+  /* max-width: 800px; */
+  margin: 30px 0 30px 0;
+  /* sequence of margin(top,right,bottom,left)*/
+  display: flex;
+  /* gap: 80px; */
+
+  /* box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px; 
+  overflow: hidden;*/
 }
+pre {
+  font-family: inherit; /* inherits body font */
+  white-space: pre-wrap; /* optional: makes long lines wrap */
+}
+.map-text {
+  width: 400px;
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  /* color: #333; */
+  background:#d2b48c;
+  text-align: left;
+  justify-content:center ;
+  padding: 40px;
+  
+}
+
+/* ENDS google map location  */
+
+/* flexbox-1 */
+.flexbox-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #F5F0E1;
+  gap: 80px;
+  border: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  /* x-offset, y-offset, blur, color */
+  padding: 50px;
+  margin: 30px 200px 30px 200px;
+  c
+}
+
+.text-box {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.image-box {
+  flex: 1;
+  text-align: left;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: 450px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* flexbox-1 end */
+
+/* flexbox-2 */
+.flexbox-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #F5F0E1;
+  gap: 80px;
+  border: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  /* x-offset, y-offset, blur, color */
+  padding: 50px;
+  margin: 30px 200px 30px 200px;
+  /* sequence of margin(top,right,bottom,left)*/
+
+}
+
+.text-box {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.image-box {
+  flex: 1;
+  text-align: right;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: 450px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* flexbox-2 end */
+
+/* flexbox-3 */
+.flexbox-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #F5F0E1;
+  gap: 80px;
+  border: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  /* x-offset, y-offset, blur, color */
+  padding: 50px;
+  margin: 30px 200px 30px 200px;
+  /* sequence of margin(top,right,bottom,left)*/
+
+}
+
+.text-box {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+.image-box {
+  flex: 1;
+  text-align: left;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: 450px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* flexbox-3 end */
