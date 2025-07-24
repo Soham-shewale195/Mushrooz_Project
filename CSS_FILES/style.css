@@ -372,7 +372,7 @@ pre {
   background-color: #F5F0E1;
   gap: 80px;
   border: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   /* x-offset, y-offset, blur, color */
   padding: 50px;
@@ -411,7 +411,7 @@ pre {
   background-color: #F5F0E1;
   gap: 80px;
   border: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   /* x-offset, y-offset, blur, color */
   padding: 50px;
@@ -451,7 +451,7 @@ pre {
   background-color: #F5F0E1;
   gap: 80px;
   border: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   /* x-offset, y-offset, blur, color */
   padding: 50px;
@@ -481,3 +481,60 @@ pre {
 }
 
 /* flexbox-3 end */
+
+/* card section */
+.card-section{
+  display: flex;
+  justify-content: center; /* Moves card to the right */
+  /* padding: 20px; */
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #fff;
+  margin: 20px;
+/* margin-left: 60px; */
+  font-family: Arial, sans-serif;
+  
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+  
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #5a3f2d;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #444;
+  margin: 10px 0;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #8b5c36; /* Brownish */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #6f4528;
+}
+/* END card section */
