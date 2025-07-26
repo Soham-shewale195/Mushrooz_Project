@@ -377,7 +377,7 @@ pre {
   /* x-offset, y-offset, blur, color */
   padding: 50px;
   margin: 30px 200px 30px 200px;
-  c
+  
 }
 
 .text-box {
@@ -538,3 +538,132 @@ pre {
   background-color: #6f4528;
 }
 /* END card section */
+
+/* Research webpage */
+.research-content {
+  background: linear-gradient(135deg, #edfdf2 0%, #ddeedd 100%);
+  padding: 40px 0 40px 0;
+}
+
+.research-content h1 {
+  font-size: 2.5rem;
+  color: #26532b;
+  margin-bottom: 1em;
+  text-align: center;
+  text-shadow: 0 2px 8px #e3f8e0;
+  letter-spacing: 1.5px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.research-content h2 {
+  color: #45784e;
+  font-size: 1.45rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2.5px solid #b6e6bd;
+  padding-bottom: 0.3em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.research-content article {
+  background: #f9fff7;
+  border-radius: 14px;
+  padding: 1.5em 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 6px 18px rgba(120,180,140,0.15);
+  border-left: 6px solid #6fdc75;
+  transition: transform 0.17s, box-shadow 0.17s;
+  position: relative;
+}
+
+.research-content article:hover {
+  transform: translateY(-5px) scale(1.012);
+  box-shadow: 0 12px 32px rgba(80,150,80,0.20);
+  border-left-color: #4eb860;
+}
+
+.research-content ul, 
+.research-content ol {
+  margin-left: 2em;
+  margin-bottom: 1em;
+  list-style: disc inside;
+}
+
+.research-content li {
+  font-size: 1.07rem;
+  line-height: 1.9;
+  color: #345134;
+  padding-bottom: 0.18em;
+}
+
+.research-content strong {
+  color: #34845c;
+  font-weight: 600;
+}
+
+.research-content em {
+  font-style: italic;
+  color: #88b875;
+  letter-spacing: .5px;
+}
+
+.research-content p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 0.6em;
+  margin-top: 0.4em;
+}
+
+.research-content article:before {
+  content: "🍄";
+  font-size: 1.35em;
+  position: absolute;
+  left: -1.7em;
+  top: 1.1em;
+  color: #cf7c37cc;
+  filter: drop-shadow(0 1px 0 #fff2);
+}
+
+/* Optional: highlight tips or extra facts */
+.research-content .highlight {
+  background: #e3fbe8;
+  border-left: 5px solid #4eb860;
+  padding: 0.7em 1em;
+  margin-top: 1em;
+  color: #235d22;
+  border-radius: 7px;
+  font-size: 1.02em;
+}
+
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .research-content {
+    padding: 10px 0;
+  }
+  .research-content h1 {
+    font-size: 1.5rem;
+    padding: 0 4%;
+  }
+  .research-content h2 {
+    font-size: 1.1rem;
+    padding: 0 2%;
+  }
+  .research-content article {
+    padding: 1em 0.5em;
+  }
+}
+#google_translate_element {
+  text-align: center;    /* Center the dropdown */
+  margin: 10px auto 20px auto;  /* Some vertical spacing */
+  max-width: 220px;      /* Adjust width as needed */
+  background-color: #f9f9f9; /* Optional background for visibility */
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  
+}
+/* end research webpage */
