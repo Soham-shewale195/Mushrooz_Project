@@ -48,3 +48,29 @@ function showSlides(n) {
   );
 }
 //  end research webpage
+
+// begin fo benefits webpage
+
+function switchTab(tabId) {
+  // Remove 'active' class from all tab buttons
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  // Remove 'active' class from all tab contents
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => content.classList.remove('active'));
+
+  // Add 'active' to the clicked button
+  const clickedButton = document.querySelector(`[onclick="switchTab('${tabId}')"]`);
+  if (clickedButton) {
+    clickedButton.classList.add('active');
+  }
+
+  // Show the selected tab content
+  const selectedContent = document.getElementById(tabId);
+  if (selectedContent) {
+    selectedContent.classList.add('active');
+  }
+}
+
+//End of benefits webpage
