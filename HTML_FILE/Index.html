@@ -6,58 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mushroom World</title>
   <link rel="stylesheet" href="/CSS_FILES/style.css" />
-  <!-- icons link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 
 <body>
-  <!-- Header -->
   <header>
-    <!-- hero-section -->
     <section class="hero">
       <h1 class="mushroom-title">
-        Welcome to the <span class="glow-text">Mushrooz's</span> 🍄
+        Welcome to <span class="glow-text">The Mushrooz's</span> 🍄
       </h1>
     </section>
 
-    <p>Explore the mysterious and magical world of mushrooms</p>
+    <p>Serving food of future with taste of evolution</p>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="Index.html">Home</a>
-    <a href="Benefits.html">Benefits</a>
-    <a href="Research.html">Research</a>
-    <a href="Contact_us.html">Contact</a>
-    <a href="About_us.html">About Us</a>
+  <nav class="navbar">
+    <button class="hamburger" aria-label="Toggle navigation menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="nav-links">
+      <a href="Index.html">Home</a>
+      <a href="Benefits.html">Benefits</a>
+      <a href="Research.html">Research</a>
+      <a href="Contact_us.html">Contact</a>
+      <a href="About_us.html">About Us</a>
+    </div>
   </nav>
 
+  <div id="google_translate_element" style="margin: 10px auto; max-width: 220px;"></div>
 
-  <!-- slider-section -->
   <section class="carousel-section">
     <div class="carousel-container">
       <div class="carousel-slide fade">
-        <img src="/IMAGES/oyster-mush.jpg" alt="Button Mushroom" />
-        <div class="slide-text">Button Mushrooms – Mild and popular 🍄</div>
+        <img src="/IMAGES/Sajarkaju_oyster.jpg" alt="Sajarkaju Oyster Mushroom" />
+        <div class="slide-text">Sajarkaju Oyster Mushroom 🍄</div>
       </div>
 
       <div class="carousel-slide fade">
-        <img src="/IMAGES/mush-img1.jpg" alt="Cremini Mushroom" />
-        <div class="slide-text">Cremini Mushrooms – Earthy, rich, and versatile 🍄</div>
+        <img src="/IMAGES/pink-oyster.png" alt="Pink Oyster Mushroom" />
+        <div class="slide-text">Pink Oyster Mushroom 🍄</div>
       </div>
 
       <div class="carousel-slide fade">
-        <img src="/IMAGES/prod1.jpg" alt="Oyster Mushroom" />
-        <div class="slide-text">Oyster Mushrooms – Delicate and smooth 🌿</div>
+        <img src="/IMAGES/white_oyster.webp" alt="White Oyster Mushroom" />
+        <div class="slide-text">White Oyster Mushroom 🍄</div>
       </div>
 
-      <!-- Arrows -->
       <a class="prev" onclick="plusSlides(-1)">❮</a>
       <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
 
-    <!-- Dots -->
     <div class="carousel-dots">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
@@ -65,112 +66,104 @@
     </div>
   </section>
 
-  <!--  flexbox 1  -->
   <section class="flexbox-1">
-    </div>
     <div class="image-box">
-      <img src="/IMAGES/prod1.jpg" alt="Mushroo'Z Product">
+      <img src="/IMAGES/MushroozFinalProduct.jpg" alt="Mushroo'Z Product Packaging">
+      <h1>Price : ₹250.INR / KG</h1>
     </div>
     <div class="text-box">
-      <h2>CrispyZ</h2>
-      <p>
-        Oyster mushrooms (Pleurotus ostreatus) are one of the most popular edible mushrooms known for their
-        oyster-shaped caps and delicate flavor. They are soft, tender, and slightly chewy in texture, making them a
-        great addition to various dishes like soups, stir-fries, and pastas. Grown naturally on decaying wood or
-        cultivated on straw and sawdust, oyster mushrooms are easy to grow and highly sustainable. They are rich in
-        protein, fiber, vitamins, and antioxidants, offering several health benefits such as boosting immunity,
-        lowering cholesterol, and supporting brain health. Due to their low calorie and glycemic index, they are also
-        suitable for diabetic and weight-conscious individuals. Their mild, earthy taste and impressive nutrition make
-        oyster mushrooms a favorite in both culinary and medicinal use across the world.
-      </p>
-
-
+      <h2>Fresh Oyster Mushroom</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nutrients</th>
+            <th>Amount (100g)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Energy</td>
+            <td>33 kcal</td>
+          </tr>
+          <tr>
+            <td>Protein</td>
+            <td>3.3 g</td>
+          </tr>
+          <tr>
+            <td>Fat</td>
+            <td>0.4 g</td>
+          </tr>
+          <tr>
+            <td>Carbohydrates</td>
+            <td>6 g</td>
+          </tr>
+          <tr>
+            <td>Dietary Fiber</td>
+            <td>2.3 g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <!--  flexbox 2  -->
   <section class="flexbox-2">
-
-    <div class="text-box">
-      <h2>Muscle+</h2>
-      <p>
-        Oyster mushrooms (Pleurotus ostreatus) are one of the most popular edible mushrooms known for their
-        oyster-shaped caps and delicate flavor. They are soft, tender, and slightly chewy in texture, making them a
-        great addition to various dishes like soups, stir-fries, and pastas. Grown naturally on decaying wood or
-        cultivated on straw and sawdust, oyster mushrooms are easy to grow and highly sustainable. They are rich in
-        protein, fiber, vitamins, and antioxidants, offering several health benefits such as boosting immunity,
-        lowering cholesterol, and supporting brain health. Due to their low calorie and glycemic index, they are also
-        suitable for diabetic and weight-conscious individuals. Their mild, earthy taste and impressive nutrition make
-        oyster mushrooms a favorite in both culinary and medicinal use across the world.
-      </p>
-    </div>
     <div class="image-box">
-      <img src="/IMAGES/prod2.jpg" alt="Mushroo'Z Product">
-    </div>
-  </section>
-
-  <!--  flexbox 3  -->
-  <section class="flexbox-3">
-    <div class="image-box">
-      <img src="/IMAGES/prod3.jpg" alt="Mushroo'Z Product">
+      <img src="/IMAGES/prod4.jpg" alt="Mushroom Powder">
+      <h1>Price : ₹999.INR / KG</h1>
     </div>
     <div class="text-box">
       <h2>Mushroom Powder</h2>
-      <p>
-        Oyster mushrooms (Pleurotus ostreatus) are one of the most popular edible mushrooms known for their
-        oyster-shaped caps and delicate flavor. They are soft, tender, and slightly chewy in texture, making them a
-        great addition to various dishes like soups, stir-fries, and pastas. Grown naturally on decaying wood or
-        cultivated on straw and sawdust, oyster mushrooms are easy to grow and highly sustainable. They are rich in
-        protein, fiber, vitamins, and antioxidants, offering several health benefits such as boosting immunity,
-        lowering cholesterol, and supporting brain health. Due to their low calorie and glycemic index, they are also
-        suitable for diabetic and weight-conscious individuals. Their mild, earthy taste and impressive nutrition make
-        oyster mushrooms a favorite in both culinary and medicinal use across the world.
-      </p>
+      <pre>
+Benefits of Oyster Mushroom Powder:
+
+Oyster mushroom powder is a nutrient-rich supplement that offers several health benefits. Some of the potential benefits include:
+
+1. Immune System Support: Oyster mushrooms contain beta-glucans, which can stimulate the immune system and increase its ability to fight off infections.
+2. Antioxidant Properties: Oyster mushrooms are rich in antioxidants, which can help protect cells from damage caused by free radicals.
+3. Anti-Inflammatory Effects: Oyster mushrooms have been shown to have anti-inflammatory properties, which may help reduce inflammation and improve overall health.
+4. Cardiovascular Health: The potassium content in oyster mushrooms can help lower blood pressure and reduce the risk of cardiovascular disease.
+5. Digestive Health: Oyster mushrooms are a good source of dietary fibre, which can help promote digestive health and prevent constipation.
+
+      </pre>
     </div>
 
   </section>
 
-  <!-- COURSES card sections -->
- <h2 style="font-size: xx-large; text-align:center; ">COURSES</h2>
-<section class="card-section">  
-<div class="card">
-  <img src="/IMAGES/prod4.jpg" alt="Mushroom Image">
-  <div class="card-content">
-    <h3>Oyster Mushroom</h3>
-    <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in nutrients and easy to cultivate.</p>
-    <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
-  </div>
-</div>
+  <h2 style="font-size: xx-large; text-align:center; ">COURSES</h2>
+  <section class="card-section">
+    <div class="card">
+      <img src="/IMAGES/MushroozFinalProduct.jpg" alt="Mushroom course image">
+      <div class="card-content">
+        <h3>Oyster Mushroom</h3>
+        <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in
+          nutrients and easy to cultivate.</p>
+        <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
+      </div>
+    </div>
 
-<div class="card">
-  <img src="/IMAGES/prod4.jpg" alt="Mushroom Image">
-  <div class="card-content">
-    <h3>Oyster Mushroom</h3>
-    <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in nutrients and easy to cultivate.</p>
-    <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
-  </div>
-</div>
+    <div class="card">
+      <img src="/IMAGES/MushroozFinalProduct.jpg" alt="Mushroom course image">
+      <div class="card-content">
+        <h3>Oyster Mushroom</h3>
+        <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in
+          nutrients and easy to cultivate.</p>
+        <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
+      </div>
+    </div>
 
-<div class="card">
-  <img src="/IMAGES/prod4.jpg" alt="Mushroom Image">
-  <div class="card-content">
-    <h3>Oyster Mushroom</h3>
-    <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in nutrients and easy to cultivate.</p>
-    <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
-  </div>
-</div>
+    <div class="card">
+      <img src="/IMAGES/MushroozFinalProduct.jpg" alt="Mushroom course image">
+      <div class="card-content">
+        <h3>Oyster Mushroom</h3>
+        <p>Oyster mushrooms are edible fungi known for their oyster-shaped cap and mild taste. They are rich in
+          nutrients and easy to cultivate.</p>
+        <a href="https://example.com" target="_blank" class="card-button">Learn More</a>
+      </div>
+    </div>
   </section>
 
-  <section class="section" id="types">
-    <h2>Popular Types of Mushrooms</h2>
-    <ul>
-      <li><strong>Button Mushroom:</strong> Mild, common.</li>
-      <li><strong>Shiitake:</strong> Meaty, used in Asian dishes.</li>
-      <li><strong>Oyster Mushroom:</strong> Delicate, stir-fry friendly.</li>
-    </ul>
-  </section>
-
-  <!-- google map location -->
   <h2 style="font-size: xx-large; text-align:center; ">Visit Us</h2>
+
   <section class="map-container">
     <div class="map">
       <iframe
@@ -180,36 +173,46 @@
       </iframe>
     </div>
     <div class="map-text">
-     <pre>
-        Adam Mushrooms pvt ltd
-        📧 Email: hello@growthefunguy.com
-        📞 Call/WhatsApp: +91 9567305337
-
-        📍 Address:
-        Mushrooz
-        lasalgoan road, Vinchur, 
-        ,Niphad ,Nashik - 422305, India
-
-        9.30 am to 5.30 pm ( Mon to Sat )
-        </pre>
+      <h2>Contact Information</h2>
+      <p class="contact-item">
+        📧 <strong>Email:</strong><br>
+        shewalepratik700@gmail.com,<br>
+        miteshhingnekar@gmail.com
+      </p>
+      <p class="contact-item">
+        📞 <strong>Call/WhatsApp:</strong><br>
+        +91 9356868223<br>
+        +91 9284908258
+      </p>
+      <p class="contact-item">
+        📍 <strong>Address:</strong><br>
+        Mushrooz, lasalgoan road, Vinchur,<br>
+        Niphad, Nashik - 422305, India
+      </p>
+      <p class="contact-item">
+        <strong>Timings:</strong><br>
+        9.30 am to 9.00 pm (Mon to Sat)
+      </p>
     </div>
   </section>
 
-  <!-- footer section -->
   <footer>
-    <p>&copy; 2025 Mushroom World | All Rights Reserved</p>
+    <p>© 2025 Mushroom World | All Rights Reserved</p>
     <div class="social-icons">
-      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-       <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://wa.me/919322576054" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/mushroo_z?igsh=MnhrM3ppaW1hcDg=" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://chat.whatsapp.com/KGrWrs4SGvcCGYDIKDg3HE?mode=ac_t" target="_blank"><i
+          class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
 
-
   <script src="/JAVASCRIPT-FILE/index.js"></script>
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <a href="https://wa.me/919356868223" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 
 </html>

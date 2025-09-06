@@ -1,76 +1,108 @@
+// This ensures all scripts run after the page content has loaded.
+document.addEventListener("DOMContentLoaded", function () {
 
-let slideIndex = 1;
-showSlides(slideIndex);
-let slideTimer = setInterval(() => plusSlides(1), 3000);
+  // === Hamburger Menu Toggle ===
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
-function plusSlides(n) {
-  clearInterval(slideTimer);
-  showSlides(slideIndex += n);
-slideTimer = setInterval(() => plusSlides(1), 3000);
-}
+  // A check to ensure the elements exist before adding the event listener.
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
-function currentSlide(n) {
-  clearInterval(slideTimer);
-  showSlides(slideIndex = n);
- slideTimer = setInterval(() => plusSlides(1), 3000);
-}
-
-function showSlides(n) {
-  let i;
+  // === Carousel Slider ===
+  let slideIndex = 1;
   const slides = document.getElementsByClassName("carousel-slide");
   const dots = document.getElementsByClassName("dot");
 
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  // Initial call and a check to ensure slides exist
+  if (slides.length > 0) {
+    showSlides(slideIndex);
   }
 
-  for (i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
+  // Auto-slide timer, runs every 3 seconds
+  let slideTimer = setInterval(() => plusSlides(1), 3000);
+
+  function plusSlides(n) {
+    clearInterval(slideTimer);
+    showSlides(slideIndex += n);
+    slideTimer = setInterval(() => plusSlides(1), 3000); // Restart the timer
   }
 
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
+  function currentSlide(n) {
+    clearInterval(slideTimer);
+    showSlides(slideIndex = n);
+    slideTimer = setInterval(() => plusSlides(1), 3000); // Restart the timer
   }
 
+  function showSlides(n) {
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
 
-  // research webpage
-  function googleTranslateElementInit() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+  }
+
+  // === Tab Switching (Benefits Page) ===
+  // This is a more robust way to handle tab clicks without using inline `onclick` attributes.
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Get the target tab from the data-tab attribute
+      const tabId = button.getAttribute("data-tab");
+
+      // Deactivate all buttons and tabs
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      tabContents.forEach(content => content.classList.remove("active"));
+
+      // Activate the clicked button and its corresponding tab content
+      button.classList.add("active");
+      document.getElementById(tabId).classList.add("active");
+    });
+  });
+
+}); // End of DOMContentLoaded
+
+// === Google Translate Widget ===
+// This function needs to be global, so it's placed outside the DOMContentLoaded listener.
+function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {
       pageLanguage: 'en',
-      includedLanguages: 'mr,en',  // Marathi and English
+      includedLanguages: 'mr,en',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     },
     'google_translate_element'
   );
 }
-//  end research webpage
 
-// begin fo benefits webpage
-
-function switchTab(tabId) {
-  // Remove 'active' class from all tab buttons
-  const buttons = document.querySelectorAll('.tab-button');
-  buttons.forEach(button => button.classList.remove('active'));
-
-  // Remove 'active' class from all tab contents
-  const contents = document.querySelectorAll('.tab-content');
-  contents.forEach(content => content.classList.remove('active'));
-
-  // Add 'active' to the clicked button
-  const clickedButton = document.querySelector(`[onclick="switchTab('${tabId}')"]`);
-  if (clickedButton) {
-    clickedButton.classList.add('active');
-  }
-
-  // Show the selected tab content
-  const selectedContent = document.getElementById(tabId);
-  if (selectedContent) {
-    selectedContent.classList.add('active');
-  }
-}
-
-//End of benefits webpage
+// === Previous code to be removed ===
+/*
+// The following code is repetitive and should be removed.
+function plusSlides(n) { ... }
+function currentSlide(n) { ... }
+function showSlides(n) { ... }
+function googleTranslateElementInit() { ... }
+function switchTab(tabId) { ... }
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+*/
